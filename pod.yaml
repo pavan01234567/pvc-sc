@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: my-mysqlco
-      image: mysql
+      image: mysql:8.0
       ports:
         - containerPort: 3306
       env:
@@ -20,11 +20,9 @@ spec:
         - name: MYSQL_PASSWORD
           value: devops@123
       volumeMounts:
-        - mountPath: /var/lib/mysql
-          name: mysql-data
+        - name: mysql-data
+          mountPath: /var/lib/mysql
   volumes:
     - name: mysql-data
       persistentVolumeClaim:
         claimName: pvc-ebs-po
-      name: mysql-data
-                  

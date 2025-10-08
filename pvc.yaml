@@ -4,14 +4,8 @@ metadata:
   name: pvc-ebs-po
 spec:
   storageClassName: ebs-sc
+  accessModes:
+    - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
-  accessModes:
-    - ReadWriteMany
-  selector:
-    matchLabels:
-      app: pv-pod
-          
-
-    
