@@ -14,4 +14,4 @@ name: myebs
 volumes:
 - name: myebs
 persistentVolumeClaim:
-claimName: pvc-ebs-po
+claimName: pvc-ebs-pod
